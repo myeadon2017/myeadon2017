@@ -2,13 +2,13 @@
 
 class Appointment():
     '''Defines the attributes and behaviors of the Appointment class'''
-    def __init__(self, appointment_type='', price=0):
+    def __init__(self, client_id=-1, appointment_type=''):
         self._id = -1
-        self.client_id = -1
+        self.client_id = client_id
         self.appointment_type = appointment_type
         self.purchase_date = None
         self.appointment_date = None
-        self.price = price
+        self.price = 0
     def get_id(self):
         '''return the id of the Appointment'''
         return self._id
@@ -31,9 +31,9 @@ class Appointment():
     def set_id(self, new_id):
         '''takes in a new ID'''
         self._id = new_id
-    def set_client_id(self, client_id):
+    def set_client_id(self, new_client_id):
         '''takes in a new client ID'''
-        self.client_id = client_id
+        self.client_id = new_client_id
     def set_appointment_type(self, appt_type):
         '''takes in a new appointment type'''
         self.appointment_type = appt_type
@@ -43,6 +43,7 @@ class Appointment():
     def set_appointment_date(self, appointment_date):
         '''takes in a new appointment date'''
         self.appointment_date = appointment_date
-    def set_price(self, new_price):
+    def set_price(self, price):
         '''takes in a new price'''
-        self.price = new_price
+        self.price = price
+
