@@ -99,17 +99,17 @@ class Client(User):
     def set_lastname(self, last_name):
         '''Takes in a last name'''
         self.last_name = last_name
-    def create_history(self, auction_id, amount, bid_status):
+    def create_history(self, appointment_id, appointment_type, purchase_date, appointment_date, price):
         '''Takes in an auction id and the amount and status of a bid and appends it to history.'''
-        add_dict = {'auction_id': auction_id, 'amount': amount, 'bid_status': bid_status}
+        add_dict = {'appointment_id': appointment_id, 'appointment_type': appointment_type, 'purchase_date': purchase_date, 'appointment_date': appointment_date, 'price': price}
         self.history.append(add_dict)
-    def create_appointments(self, auction_id, amount, bid_status):
-        '''Takes in an auction id and the amount and status of a bid and appends it to history.'''
-        add_dict = {'auction_id': auction_id, 'amount': amount, 'bid_status': bid_status}
+    def create_appointments(self, auction_id):
+        '''Takes in an'''
+        add_dict = {'auction_id': auction_id}
         self.history.append(add_dict)
-    def create_payments(self, auction_id, amount, bid_status):
-        '''Takes in an auction id and the amount and status of a bid and appends it to history.'''
-        add_dict = {'auction_id': auction_id, 'amount': amount, 'bid_status': bid_status}
+    def create_payments(self, auction_id):
+        '''Takes in an'''
+        add_dict = {'auction_id': auction_id}
         self.history.append(add_dict)
 
     @classmethod
