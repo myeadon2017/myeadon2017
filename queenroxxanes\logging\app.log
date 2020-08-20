@@ -1,0 +1,18 @@
+2020-08-15 12:39:04,718 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-08-15 12:40:50,360 - werkzeug - INFO - 127.0.0.1 - - [15/Aug/2020 12:40:50] "GET / HTTP/1.1" 200 -
+2020-08-15 12:41:03,863 - werkzeug - INFO - 127.0.0.1 - - [15/Aug/2020 12:41:03] "GET /favicon.ico HTTP/1.1" 404 -
+2020-08-15 13:53:56,585 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-08-17 09:51:46,168 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-08-18 10:36:31,149 - __main__ - INFO - Added <bound method Client.get_firstname of <queenroxxanes.models.users.Client object at 0x10a2c6af0>> ,Username: <bound method User.get_username of <queenroxxanes.models.users.Client object at 0x10a2c6af0>>
+2020-08-18 10:36:31,615 - __main__ - INFO - Added <bound method User.get_username of <queenroxxanes.models.users.Manager object at 0x10a3472b0>>
+2020-08-18 10:44:39,609 - __main__ - INFO - Added <bound method Client.get_firstname of <queenroxxanes.models.users.Client object at 0x1033ad820>> ,Username: <bound method User.get_username of <queenroxxanes.models.users.Client object at 0x1033ad820>>
+2020-08-18 10:44:39,737 - __main__ - INFO - Added <bound method User.get_username of <queenroxxanes.models.users.Manager object at 0x10342ef40>>
+2020-08-18 10:44:39,862 - __main__ - INFO - Added appointment 1, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x103436d60>>
+2020-08-19 16:20:23,883 - __main__ - INFO - Added <bound method Client.get_firstname of <queenroxxanes.models.users.Client object at 0x1076d17c0>> ,Username: <bound method User.get_username of <queenroxxanes.models.users.Client object at 0x1076d17c0>>
+2020-08-19 16:20:24,041 - __main__ - INFO - Added <bound method User.get_username of <queenroxxanes.models.users.Manager object at 0x107749880>>
+2020-08-19 16:23:58,102 - __main__ - INFO - Added <bound method Client.get_firstname of <queenroxxanes.models.users.Client object at 0x109d8f7c0>> ,Username: <bound method User.get_username of <queenroxxanes.models.users.Client object at 0x109d8f7c0>>
+2020-08-19 16:23:58,220 - __main__ - INFO - Added <bound method User.get_username of <queenroxxanes.models.users.Manager object at 0x109e02ee0>>
+2020-08-19 16:23:58,348 - __main__ - INFO - Added appointment 1, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x109e09e80>>
+2020-08-20 15:05:41,634 - __main__ - INFO - Added <bound method Client.get_firstname of <queenroxxanes.models.users.Client object at 0x10962d7c0>> ,Username: <bound method User.get_username of <queenroxxanes.models.users.Client object at 0x10962d7c0>>
+2020-08-20 15:05:41,812 - __main__ - INFO - Added <bound method User.get_username of <queenroxxanes.models.users.Manager object at 0x1096a6880>>
+2020-08-20 15:05:41,936 - __main__ - INFO - Added appointment 1, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x1096b6ac0>>

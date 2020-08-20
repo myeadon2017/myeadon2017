@@ -3,6 +3,7 @@
 import os
 import datetime
 import pymongo
+
 from queenroxxanes.logging.logger import get_logger
 from queenroxxanes.models.appointments import Appointment
 from queenroxxanes.models.users import Client, Manager
@@ -17,7 +18,7 @@ mongo = pymongo.MongoClient(MONGO_URI) # Open the database connection
 # Database and collection 
 db = mongo.queenroxxanes
 util = db['utilities']
-appointments = db['auctions']
+appointments = db['appointments']
 users = db['users']
 
 # Creation Operations
@@ -45,9 +46,19 @@ def create_manager(new_man: Manager):
     _log.info('Added %s', new_man.get_username)
     return op_success
 
-def create_appointment(new_appointment: Appointment):
+def create_appointment(new_appointment: Appointment, assigned_client: Client):
     '''Create an Appointment in the database'''
     new_appointment.set_id(_get_appointment_id_counter())
+    new_appointment.set_client_id(assigned_client.get_id())
+    if new_appointment.appointment_type == 'Eyebrow Appt':
+        new_appointment.set_price(100)
+        new_appointment.set_purchase_date = datetime.datetime.now()
+    elif new_appointment.appointment_type == 'Hair Appt':
+        new_appointment.set_price(200)
+        new_appointment.set_purchase_date = datetime.datetime.now()
+    elif new_appointment.appointment_type == 'Nail Appt':
+        new_appointment.set_price(150)
+        new_appointment.set_purchase_date = datetime.datetime.now()
     try:
         appointments.insert_one(new_appointment.to_dict())
         op_success = new_appointment
@@ -98,6 +109,7 @@ def read_appointments_from_query(query_dict):
     return return_struct
 
 def read_appointment_info_by_user_history(user_id):
+    '''Reads users appointment history'''
     client = Client.from_dict(read_user_by_id(int(user_id)))
     appointment_history = []
     for appointment in client.get_history():
@@ -125,4 +137,94 @@ def login(username: str, password: str):
         return return_user
     else:
         return None
+    
+def user_appt_history(appointment_id, client_id):
+    '''Find and updates the appointment history of the clients involved'''
+    appointment_id = int(appointment_id)
+    client_id = int(client_id)
+    query_string = {'_id': auction_id}
+    appt = Appointment.from_dict(read_appointment_by_id(appointment_id))
+    if int(appt['client_id']) == client_id:
+        client_doc = read_user_by_id(client_id)
+        try:
+            client = Client.from_dict(client_doc)
+            client.create_history(appointment_id, appt.get_appointment_type, appt.purchase_date, appt.get_appointment_date, appt.get_price)
+            users.update_one({'_id': client_id}, {'$set': client.to_dict()})
+            op_success = client
+            _log.info('Updated information for client ID %s', client_id)
+        except TypeError as err:
+                _log.error('Encountered an error: %s', err)
+        return op_success
+    else:
+        pass
+
+def update_user_info(user_id: int, user_info: dict):
+    '''Updates user information'''
+    query_string = {'_id': int(user_id)}
+    update_string = {'username': user_info['username'], 'password': user_info['password']}
+    try:
+        users.update_one(query_string, {'$set': update_string})
+        op_success = user_info
+        _log.info('Updated information for user ID %s', user_id)
+    except:
+        op_success = None
+        _log.info('Could not update information for user ID %s', user_id)
+    return op_success
+
+""" def delete_user(user_id):
+    '''Deletes a user with specified id. Rejects deletion if they are a manager.
+    Also removes any active appointments with connected to user.'''
+    user_query_string = {'_id': int(user_id)}
+    query_string = {'status': 'Active', 'bids.bidder_id': user_id}
+    try:
+        user = read_user_by_id(user_id)
+        if 'username' in user and user['username'] == 'manager':
+            return 'Cannot delete a manager.'
+        users.delete_one(user_query_string)
+        appointments.update_many(query_string, {'$pull': {'bids': {'bidder_id': user_id}}})
+        op_success = user_id
+        _log.info('Deleted user ID %s', user_id)
+    except:
+        op_success = None
+        _log.info('Could not delete user ID %s', user_id)
+    return op_success """
+
+# ID Counter Functions
+def _get_user_id_counter():
+    '''This function will get a unique ID by pulling it from the counter field of a counter
+    document, then increase the counter value.'''
+    return util.find_one_and_update({'_id': 'USERID_COUNTER'},
+                                    {'$inc': {'count': 1}},
+                                    return_document=pymongo.ReturnDocument.AFTER)['count']
+
+def _get_appointment_id_counter():
+    '''This function will get a unique ID by pulling it from the counter field of a counter
+    document, then increase the counter value.'''
+    return util.find_one_and_update({'_id': 'APPOINTMENTID_COUNTER'},
+                                    {'$inc': {'count': 1}},
+                                    return_document=pymongo.ReturnDocument.AFTER)['count']
+
+
+if __name__ == "__main__":
+    util.drop()
+    users.drop()
+    appointments.drop()
+
+    util.insert_one({'_id': 'USERID_COUNTER', 'count': 0})
+    util.insert_one({'_id': 'APPOINTMENTID_COUNTER', 'count': 0})
+
+    users.create_index('username', unique=True)
+
+    # Client
+    client = Client('Matthew', 'Yeadon', 'username', 'password')
+    create_client(client)
+    # Manager
+    manager = Manager('manager', 'password')
+    create_manager(manager)
+
+    # Appointment
+    assigned_client = client
+    appointment = Appointment(assigned_client.get_id(), 'Eyebrow Appt', '9/20/2020')
+    create_appointment(appointment, assigned_client)
+    
 
