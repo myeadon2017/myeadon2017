@@ -3,6 +3,9 @@
 import datetime
 from flask import Blueprint, jsonify, request
 from queenroxxanes.logging.logger import get_logger
+from queenroxxanes.data.db import create_appointment, read_appointments_from_query
+from queenroxxanes.models.appointments import Appointment
+from queenroxxanes.models.users import Client
 _log = get_logger(__name__)
 
 appointments = Blueprint('appointments', __name__)
@@ -10,75 +13,38 @@ appointments = Blueprint('appointments', __name__)
 @appointments.route('/appointments', methods=['GET', 'POST'])
 def appointments_main():
     '''This is the main /auctions route'''
+    required_fields = ['client_id', 'appointment_type', 'appointment_date']
     if request.method == 'POST':
-        # POST request body should contain...
-        # ID of the item (item_id)
         input_dict = request.get_json(force=True)
-        _log.debug(input_dict)
-        if 'item_id' in input_dict:
-            new_auction = Auction(input_dict['item_id'])
-            if create_auction(new_auction):
-                return jsonify(new_auction.to_dict()), 201
-            else:
-                return request.json, 400
+        _log.debug('Appointment POST request received with body %s', input_dict)
+        if all(field in input_dict for field in required_fields):
+            client_id = input_dict['client_id']
+            appointment_type = input_dict['appointment_type']
+            appointment_date = input_dict['appointment_date']
+            new_appointment = Appointment(client_id, appointment_type, appointment_date)
+            create_appointment(new_appointment)
+            return jsonify(new_appointment.to_dict()), 201
         else:
             return request.json, 400
     elif request.method == 'GET':
-        # The GET request will either return all auctions or return them based on query info
+        # The GET request will either return all appointments or return them based on query info
         if len(request.args) == 0:
-            return {'auctions': read_auctions_from_query({})}, 200
+            return {'appointments': read_appointments_from_query({})}, 200
         else:
             query_dict = dict(request.args)
             for query in query_dict:
                 try:
-                    query_dict[query] = int(query_dict[query])
-                    if query == 'date_end':
-                        num_of_days = query_dict[query]
-                        query_dict[query] = {'$gt': datetime.datetime.now() +
-                                                    datetime.timedelta(days=num_of_days)}
+                    query_dict[query] = str(query_dict[query])
+                    if query == 'appointment_date':
+                        date = query_dict[query]
+                        query_dict[query] = {'$eq': query_dict[query]}
                         _log.debug(query_dict[query])
-                        _log.debug(datetime.datetime.now() + datetime.timedelta(days=num_of_days))
+                        _log.debug(date)
                 except ValueError as err:
-                    _log.error('Could not cast value to int, moving on...')
+                    _log.error('Could not cast value to str, moving on...')
             _log.debug(query_dict)
-            return_auctions = read_auctions_from_query(query_dict)
-            return {'auctions': return_auctions}, 200
+            return_appointments = read_appointments_from_query(query_dict)
+            return {'appointments': return_appointments}, 200
     else:
         return 'Not implemented', 501
-
-@auctions.route('/auctions/<auction_id>', methods=['GET', 'POST', 'PUT'])
-def auctions_with_id(auction_id):
-    '''This is for requests associated with an Auction ID'''
-    if request.method == 'POST':
-        required_fields = ['bidder_id', 'item_id', 'amount']
-        input_dict = request.get_json(force=True)
-        _log.info('POST request recieved with body %s', input_dict)
-        try:
-            query_id = int(auction_id)
-        except TypeError as err:
-            input_dict = {}
-        if all(field in input_dict for field in required_fields):
-            new_bidder_id = input_dict['bidder_id']
-            new_item_id = input_dict['item_id']
-            new_amount = input_dict['amount']
-            new_bid = Bid(new_bidder_id, new_item_id, new_amount)
-            create_bid(new_bid, query_id)
-            # response = make_response()
-            return jsonify(new_bid.to_dict()), 201
-        else:
-            # response = make_response()
-            return request.json, 400
-    elif request.method == 'PUT':
-        input_dict = request.get_json(force=True)
-        _log.debug(input_dict)
-        target_auction = int(auction_id)
-        if 'numOfDays' in input_dict:
-            updated_auction = auction_start(target_auction, input_dict['numOfDays'])
-            return updated_auction, 200
-        elif 'bidder_id' in input_dict:
-            auction_end(input_dict['auction_id'], input_dict['bidder_id'])
-            return 'Nothing to say', 204
-        else:
-            return 'Invalid Request', 400
-    else:
-        pass
+        

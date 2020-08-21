@@ -37,9 +37,9 @@ class Appointment():
     def set_appointment_type(self, appt_type):
         '''takes in a new appointment type'''
         self.appointment_type = appt_type
-    def set_purchase_date(self, purchase_date):
+    def set_purchase_date(self, new_purchase_date):
         '''takes in a new purchase date'''
-        self.purchase_date = purchase_date
+        self.purchase_date = new_purchase_date
     def set_appointment_date(self, new_appointment_date):
         '''takes in a new appointment date'''
         self.appointment_date = new_appointment_date

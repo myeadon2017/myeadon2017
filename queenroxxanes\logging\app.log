@@ -16,3 +16,40 @@
 2020-08-20 15:05:41,634 - __main__ - INFO - Added <bound method Client.get_firstname of <queenroxxanes.models.users.Client object at 0x10962d7c0>> ,Username: <bound method User.get_username of <queenroxxanes.models.users.Client object at 0x10962d7c0>>
 2020-08-20 15:05:41,812 - __main__ - INFO - Added <bound method User.get_username of <queenroxxanes.models.users.Manager object at 0x1096a6880>>
 2020-08-20 15:05:41,936 - __main__ - INFO - Added appointment 1, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x1096b6ac0>>
+2020-08-21 13:34:04,410 - __main__ - INFO - Added <bound method Client.get_firstname of <queenroxxanes.models.users.Client object at 0x1107467f0>> ,Username: <bound method User.get_username of <queenroxxanes.models.users.Client object at 0x1107467f0>>
+2020-08-21 13:34:04,536 - __main__ - INFO - Added <bound method User.get_username of <queenroxxanes.models.users.Manager object at 0x1107cbf10>>
+2020-08-21 13:34:47,216 - __main__ - INFO - Added <bound method Client.get_firstname of <queenroxxanes.models.users.Client object at 0x1107827c0>> ,Username: <bound method User.get_username of <queenroxxanes.models.users.Client object at 0x1107827c0>>
+2020-08-21 13:34:47,336 - __main__ - INFO - Added <bound method User.get_username of <queenroxxanes.models.users.Manager object at 0x1108043d0>>
+2020-08-21 13:54:30,368 - __main__ - INFO - Added <bound method Client.get_firstname of <queenroxxanes.models.users.Client object at 0x110cdb7f0>> ,Username: <bound method User.get_username of <queenroxxanes.models.users.Client object at 0x110cdb7f0>>
+2020-08-21 13:54:30,516 - __main__ - INFO - Added <bound method User.get_username of <queenroxxanes.models.users.Manager object at 0x110d60f10>>
+2020-08-21 14:03:37,643 - __main__ - INFO - Added <bound method Client.get_firstname of <queenroxxanes.models.users.Client object at 0x101eee7f0>> ,Username: <bound method User.get_username of <queenroxxanes.models.users.Client object at 0x101eee7f0>>
+2020-08-21 14:03:37,767 - __main__ - INFO - Added <bound method User.get_username of <queenroxxanes.models.users.Manager object at 0x101f6a8b0>>
+2020-08-21 14:03:38,014 - __main__ - ERROR - Encountered an error: 'NoneType' object is not callable
+2020-08-21 14:08:49,063 - __main__ - INFO - Added <bound method Client.get_firstname of <queenroxxanes.models.users.Client object at 0x1023047f0>> ,Username: <bound method User.get_username of <queenroxxanes.models.users.Client object at 0x1023047f0>>
+2020-08-21 14:08:49,210 - __main__ - INFO - Added <bound method User.get_username of <queenroxxanes.models.users.Manager object at 0x10238af10>>
+2020-08-21 14:08:49,448 - __main__ - ERROR - Encountered an error: 'NoneType' object is not callable
+2020-08-21 14:08:49,448 - __main__ - INFO - Added appointment 1, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x102391d30>>
+2020-08-21 14:11:31,198 - __main__ - INFO - Added <bound method Client.get_firstname of <queenroxxanes.models.users.Client object at 0x110408400>> ,Username: <bound method User.get_username of <queenroxxanes.models.users.Client object at 0x110408400>>
+2020-08-21 14:11:31,362 - __main__ - INFO - Added <bound method User.get_username of <queenroxxanes.models.users.Manager object at 0x11040ff70>>
+2020-08-21 14:11:31,601 - __main__ - ERROR - Encountered an error: 'NoneType' object is not callable
+2020-08-21 14:11:31,601 - __main__ - INFO - Added appointment 1, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x11040ff40>>
+2020-08-21 14:13:33,117 - __main__ - INFO - Added <bound method Client.get_firstname of <queenroxxanes.models.users.Client object at 0x105ecb7f0>> ,Username: <bound method User.get_username of <queenroxxanes.models.users.Client object at 0x105ecb7f0>>
+2020-08-21 14:13:33,244 - __main__ - INFO - Added <bound method User.get_username of <queenroxxanes.models.users.Manager object at 0x105f468b0>>
+2020-08-21 14:13:33,482 - __main__ - ERROR - Encountered an error: 'NoneType' object is not callable
+2020-08-21 14:13:33,482 - __main__ - INFO - Added appointment 1, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x105f58d30>>
+2020-08-21 14:30:10,487 - __main__ - INFO - Added <bound method Client.get_firstname of <queenroxxanes.models.users.Client object at 0x10f97b7f0>> ,Username: <bound method User.get_username of <queenroxxanes.models.users.Client object at 0x10f97b7f0>>
+2020-08-21 14:30:10,803 - __main__ - INFO - Added <bound method User.get_username of <queenroxxanes.models.users.Manager object at 0x10f9ff400>>
+2020-08-21 14:30:11,096 - __main__ - INFO - Updated information for client ID 1
+2020-08-21 14:30:11,096 - __main__ - INFO - Added appointment 1, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x10fa06d30>>
+2020-08-21 14:42:16,954 - __main__ - INFO - Added <bound method Client.get_firstname of <queenroxxanes.models.users.Client object at 0x10ea2f7f0>> ,Username: <bound method User.get_username of <queenroxxanes.models.users.Client object at 0x10ea2f7f0>>
+2020-08-21 14:42:17,076 - __main__ - INFO - Added <bound method User.get_username of <queenroxxanes.models.users.Manager object at 0x10eab3400>>
+2020-08-21 14:42:17,356 - __main__ - INFO - Updated information for client ID 1
+2020-08-21 14:42:17,357 - __main__ - INFO - Added appointment 1, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x10eabad30>>
+2020-08-21 14:46:09,778 - __main__ - INFO - Added <bound method Client.get_firstname of <queenroxxanes.models.users.Client object at 0x1060b47f0>> ,Username: <bound method User.get_username of <queenroxxanes.models.users.Client object at 0x1060b47f0>>
+2020-08-21 14:46:09,904 - __main__ - INFO - Added <bound method User.get_username of <queenroxxanes.models.users.Manager object at 0x10612f8b0>>
+2020-08-21 14:46:10,191 - __main__ - INFO - Updated information for client ID 1
+2020-08-21 14:46:10,192 - __main__ - INFO - Added appointment 1, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x106140d00>>
+2020-08-21 15:26:34,498 - __main__ - INFO - Added <bound method Client.get_firstname of <queenroxxanes.models.users.Client object at 0x10c6e27c0>> ,Username: <bound method User.get_username of <queenroxxanes.models.users.Client object at 0x10c6e27c0>>
+2020-08-21 15:26:34,655 - __main__ - INFO - Added <bound method User.get_username of <queenroxxanes.models.users.Manager object at 0x10c74d880>>
+2020-08-21 15:26:34,958 - __main__ - INFO - Updated information for client ID 1
+2020-08-21 15:26:34,958 - __main__ - INFO - Added appointment 1, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x10c75fd90>>

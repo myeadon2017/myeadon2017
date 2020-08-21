@@ -71,7 +71,7 @@ class Client(User):
         super().__init__(username, password)
         self.first_name = first_name
         self.last_name = last_name
-        self.appointments = []
+        self.current_appointments = []
         '''appointments = [{appointment_id, appointment_type, date, time, price}]'''
         self.history = []
         '''history = [{auction_id, amount, w/l status}]'''
@@ -86,9 +86,9 @@ class Client(User):
     def get_history(self):
         '''Gets clients history'''
         return self.history
-    def get_appointments(self):
+    def get_current_appointments(self):
         '''Gets clients appointments'''
-        return self.appointments
+        return self.current_appointments
     def get_payments(self):
         '''Gets clients payments'''
         return self.payments
@@ -99,14 +99,14 @@ class Client(User):
     def set_lastname(self, last_name):
         '''Takes in a last name'''
         self.last_name = last_name
-    def create_history(self, appointment_id, appointment_type, purchase_date, appointment_date, price):
+    def create_current_appointments(self, appointment_id, appointment_type, purchase_date, appointment_date, price):
+        '''Takes in appointments and adds them to the users current appointment history'''
+        add_dict = {'appointment_id': appointment_id, 'appointment_type': appointment_type, 'purchase_date': purchase_date, 'appointment_date': appointment_date, 'price': price}
+        self.current_appointments.append(add_dict)
+    """ def create_history(self, appointment_id, appointment_type, purchase_date, appointment_date, price):
         '''Takes in an auction id and the amount and status of a bid and appends it to history.'''
         add_dict = {'appointment_id': appointment_id, 'appointment_type': appointment_type, 'purchase_date': purchase_date, 'appointment_date': appointment_date, 'price': price}
-        self.history.append(add_dict)
-    def create_appointments(self, auction_id):
-        '''Takes in an'''
-        add_dict = {'auction_id': auction_id}
-        self.history.append(add_dict)
+        self.history.append(add_dict) """
     def create_payments(self, auction_id):
         '''Takes in an'''
         add_dict = {'auction_id': auction_id}

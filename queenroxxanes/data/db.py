@@ -46,21 +46,21 @@ def create_manager(new_man: Manager):
     _log.info('Added %s', new_man.get_username)
     return op_success
 
-def create_appointment(new_appointment: Appointment, assigned_client: Client):
+def create_appointment(new_appointment: Appointment):
     '''Create an Appointment in the database'''
     new_appointment.set_id(_get_appointment_id_counter())
-    new_appointment.set_client_id(assigned_client.get_id())
     if new_appointment.appointment_type == 'Eyebrow Appt':
         new_appointment.set_price(100)
-        new_appointment.set_purchase_date = datetime.datetime.now()
+        new_appointment.set_purchase_date(datetime.datetime.now())
     elif new_appointment.appointment_type == 'Hair Appt':
         new_appointment.set_price(200)
-        new_appointment.set_purchase_date = datetime.datetime.now()
+        new_appointment.set_purchase_date(datetime.datetime.now())
     elif new_appointment.appointment_type == 'Nail Appt':
         new_appointment.set_price(150)
-        new_appointment.set_purchase_date = datetime.datetime.now()
+        new_appointment.set_purchase_date(datetime.datetime.now())
     try:
         appointments.insert_one(new_appointment.to_dict())
+        update_users_current_appointments(new_appointment.get_id(), new_appointment.get_client_id())
         op_success = new_appointment
     except pymongo.errors.DuplicateKeyError as err:
         _log.error(err)
@@ -108,15 +108,15 @@ def read_appointments_from_query(query_dict):
         return_struct.append(appointment)
     return return_struct
 
-def read_appointment_info_by_user_history(user_id):
-    '''Reads users appointment history'''
+def read_appointment_info_by_users_current_appointments(user_id):
+    '''Reads users current appointments'''
     client = Client.from_dict(read_user_by_id(int(user_id)))
-    appointment_history = []
-    for appointment in client.get_history():
+    current_user_appointments = []
+    for appointment in client.get_current_appointments():
         appt = read_appointment_by_id(int(appointment['_id']))
         _log.debug(appt)
-        appointment_history.append({'appointment_id': appointment['_id'], 'appointment_type': appointment['appointment_type'], 'purchase_date': appointment['purchase_date'], 'appointment_date': appointment['appointment_date'], 'price': appointment['price']})
-    return appointment_history
+        current_user_appointments.append({'appointment_id': appointment['_id'], 'appointment_type': appointment['appointment_type'], 'purchase_date': appointment['purchase_date'], 'appointment_date': appointment['appointment_date'], 'price': appointment['price']})
+    return current_user_appointments
 
 def login(username: str, password: str):
     '''A function that takes in a username and returns a user object with that username'''
@@ -138,22 +138,23 @@ def login(username: str, password: str):
     else:
         return None
     
-def user_appt_history(appointment_id, client_id):
-    '''Find and updates the appointment history of the clients involved'''
+def update_users_current_appointments(appointment_id, client_id):
+    '''Find and updates the current appointments list of the client involved'''
     appointment_id = int(appointment_id)
     client_id = int(client_id)
-    query_string = {'_id': auction_id}
+    query_string = {'_id': appointment_id}
     appt = Appointment.from_dict(read_appointment_by_id(appointment_id))
-    if int(appt['client_id']) == client_id:
+    if appt.get_client_id() == client_id:
         client_doc = read_user_by_id(client_id)
         try:
             client = Client.from_dict(client_doc)
-            client.create_history(appointment_id, appt.get_appointment_type, appt.purchase_date, appt.get_appointment_date, appt.get_price)
+            client.create_current_appointments(appointment_id, appt.get_appointment_type(), appt.get_purchase_date(), appt.get_appointment_date(), appt.get_price())
             users.update_one({'_id': client_id}, {'$set': client.to_dict()})
             op_success = client
             _log.info('Updated information for client ID %s', client_id)
         except TypeError as err:
-                _log.error('Encountered an error: %s', err)
+            op_success = None
+            _log.error('Encountered an error: %s', err)
         return op_success
     else:
         pass
@@ -225,6 +226,6 @@ if __name__ == "__main__":
     # Appointment
     assigned_client = client
     appointment = Appointment(assigned_client.get_id(), 'Eyebrow Appt', '9/20/2020')
-    create_appointment(appointment, assigned_client)
+    create_appointment(appointment)
     
 
