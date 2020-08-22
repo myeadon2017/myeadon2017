@@ -172,23 +172,21 @@ def update_user_info(user_id: int, user_info: dict):
         _log.info('Could not update information for user ID %s', user_id)
     return op_success
 
-""" def delete_user(user_id):
+def delete_user(user_id):
     '''Deletes a user with specified id. Rejects deletion if they are a manager.
     Also removes any active appointments with connected to user.'''
     user_query_string = {'_id': int(user_id)}
-    query_string = {'status': 'Active', 'bids.bidder_id': user_id}
     try:
         user = read_user_by_id(user_id)
         if 'username' in user and user['username'] == 'manager':
             return 'Cannot delete a manager.'
         users.delete_one(user_query_string)
-        appointments.update_many(query_string, {'$pull': {'bids': {'bidder_id': user_id}}})
         op_success = user_id
         _log.info('Deleted user ID %s', user_id)
     except:
         op_success = None
         _log.info('Could not delete user ID %s', user_id)
-    return op_success """
+    return op_success
 
 # ID Counter Functions
 def _get_user_id_counter():
