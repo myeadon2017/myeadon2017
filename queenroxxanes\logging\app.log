@@ -57,3 +57,9 @@
 2020-08-22 13:57:47,835 - __main__ - INFO - Added <bound method User.get_username of <queenroxxanes.models.users.Manager object at 0x107aa9ee0>>
 2020-08-22 13:57:48,121 - __main__ - INFO - Updated information for client ID 1
 2020-08-22 13:57:48,121 - __main__ - INFO - Added appointment 1, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x107ab0ca0>>
+2020-08-22 14:51:07,754 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-08-22 14:51:37,151 - werkzeug - INFO - 127.0.0.1 - - [22/Aug/2020 14:51:37] "[37mGET / HTTP/1.1[0m" 200 -
+2020-08-23 10:43:15,661 - __main__ - INFO - Added <bound method Client.get_firstname of <queenroxxanes.models.users.Client object at 0x10f9b3790>> ,Username: <bound method User.get_username of <queenroxxanes.models.users.Client object at 0x10f9b3790>>
+2020-08-23 10:43:15,788 - __main__ - INFO - Added <bound method User.get_username of <queenroxxanes.models.users.Manager object at 0x10fa1d850>>
+2020-08-23 10:43:16,062 - __main__ - INFO - Updated information for client ID 1
+2020-08-23 10:43:16,062 - __main__ - INFO - Added appointment 1, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x10fa2fd30>>

@@ -30,20 +30,6 @@ def appointments_main():
         # The GET request will either return all appointments or return them based on query info
         if len(request.args) == 0:
             return {'appointments': read_appointments_from_query({})}, 200
-        elif query_dict = dict(request.args)
-            for query in query_dict:
-                try:
-                    query_dict[query] = int(query_dict[query])
-                    if query == 'client_id':
-                        user_id = query_dict[query]
-                        query_dict[query] = {'$eq': query_dict[query]}
-                        _log.debug(query_dict[query])
-                        _log.debug(user_id)
-                except ValueError as err:
-                    _log.error('Could not cast value to int, moving on...')
-            _log.debug(query_dict)
-            return_appointments = read_appointments_from_query(query_dict)
-            return {'appointments': return_appointments}, 200
         else:
             query_dict = dict(request.args)
             for query in query_dict:
@@ -70,3 +56,19 @@ def appointments_with_id(appointment_id):
         appointment = read_appointment_by_id(appointment_id)
         if appointment:
             return jsonify(read_appointment_by_id(appointment_id)), 200
+
+
+""" elif query_dict = dict(request.args)
+            for query in query_dict:
+                try:
+                    query_dict[query] = int(query_dict[query])
+                    if query == 'client_id':
+                        user_id = query_dict[query]
+                        query_dict[query] = {'$eq': query_dict[query]}
+                        _log.debug(query_dict[query])
+                        _log.debug(user_id)
+                except ValueError as err:
+                    _log.error('Could not cast value to int, moving on...')
+            _log.debug(query_dict)
+            return_appointments = read_appointments_from_query(query_dict)
+            return {'appointments': return_appointments}, 200 """
