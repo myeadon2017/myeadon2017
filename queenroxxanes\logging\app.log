@@ -63,3 +63,34 @@
 2020-08-23 10:43:15,788 - __main__ - INFO - Added <bound method User.get_username of <queenroxxanes.models.users.Manager object at 0x10fa1d850>>
 2020-08-23 10:43:16,062 - __main__ - INFO - Updated information for client ID 1
 2020-08-23 10:43:16,062 - __main__ - INFO - Added appointment 1, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x10fa2fd30>>
+2020-08-24 11:09:48,604 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-08-24 16:20:29,966 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-08-24 16:50:47,688 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 16:50:47] "[31m[1mGET /users HTTP/1.1[0m" 401 -
+2020-08-24 16:50:47,955 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 16:50:47] "[31m[1mGET /users HTTP/1.1[0m" 401 -
+2020-08-24 17:58:43,278 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 17:58:43] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-24 17:58:44,315 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 17:58:44] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-08-24 17:58:54,715 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 17:58:54] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-24 17:58:54,721 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 17:58:54] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-08-24 17:59:12,140 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 17:59:12] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-24 17:59:12,212 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 17:59:12] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-08-24 17:59:25,467 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 17:59:25] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-24 17:59:25,552 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 17:59:25] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-08-24 18:00:06,138 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 18:00:06] "[31m[1mGET /users HTTP/1.1[0m" 401 -
+2020-08-24 18:00:06,190 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 18:00:06] "[31m[1mGET /users HTTP/1.1[0m" 401 -
+2020-08-24 18:00:28,668 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 18:00:28] "[31m[1mGET /users HTTP/1.1[0m" 401 -
+2020-08-24 18:00:28,720 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 18:00:28] "[31m[1mGET /users HTTP/1.1[0m" 401 -
+2020-08-24 18:01:53,249 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 18:01:53] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-24 18:01:53,345 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 18:01:53] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-08-24 18:02:23,569 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 18:02:23] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-24 18:02:23,589 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 18:02:23] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-08-24 18:06:49,432 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 18:06:49] "[31m[1mGET /users HTTP/1.1[0m" 401 -
+2020-08-24 18:07:20,976 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 18:07:20] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-24 18:07:21,122 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 18:07:21] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-08-24 18:07:25,507 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 18:07:25] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-08-24 18:07:30,305 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 18:07:30] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-24 18:07:30,400 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 18:07:30] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-08-24 18:07:34,634 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 18:07:34] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-08-24 18:07:37,888 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 18:07:37] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-24 18:07:37,970 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 18:07:37] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-08-24 18:07:44,882 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 18:07:44] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-24 18:07:44,961 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2020 18:07:44] "[37mDELETE /users HTTP/1.1[0m" 204 -
