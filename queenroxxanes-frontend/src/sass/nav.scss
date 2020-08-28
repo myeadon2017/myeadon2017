@@ -7,24 +7,25 @@
     h1 {
         color: $ah-offblack;
         font-weight: bold;
-        text-decoration: underline;
+        text-decoration: underline
+        overline dotted pink;
         text-decoration-thickness: 2px;
     }
     h2 {
         color: $ah-offblack;
     }
     h3 {
-        color: $ah-gold;
+        color: $ah-pink;
         font-weight: bold;
     }
     h4 {
-        color: $ah-gold;
+        color: $ah-pink;
     }
     h5 {
-        color: $ah-gold;
+        color: $ah-pink;
     }
     h6 {
-        color: $ah-gold;
+        color: $ah-pink;
     }
 }
 
@@ -44,14 +45,14 @@ td {
         text-align: right;
     }
     button{
-        background-color: $ah-red;
+        background-color: $ah-pink;
         color: $ah-offwhite;
         border-radius: 8px;
         font-size: 20px;
     }
     button:hover{
         background-color: $ah-offwhite;
-        color: $ah-red;
+        color: $ah-pink;
     }
     .small_h5{
         text-align: center;
@@ -60,7 +61,7 @@ td {
 
 .form-row{
     button{
-        background-color: $ah-red;
+        background-color: $ah-pink;
         color: $ah-offwhite;
         border-radius: 8px;
         font-size: small;
@@ -68,7 +69,7 @@ td {
     }
     button:hover{
         background-color: $ah-offwhite;
-        color: $ah-red;
+        color: $ah-pink;
     }
 }
 
@@ -77,7 +78,7 @@ td {
     padding-right: 8px;
     font-size: large;
     button{
-        background-color: $ah-red;
+        background-color: $ah-pink;
         color: $ah-offwhite;
         border-radius: 8px;
         font-size: medium;
@@ -86,25 +87,25 @@ td {
     }
     button:hover{
         background-color: $ah-offwhite;
-        color: $ah-red;
+        color: $ah-pink;
     }
 }
 
 .card{
     button{
-        background-color: $ah-red;
+        background-color: $ah-pink;
         color: $ah-offwhite;
         border-radius: 8px;
         font-size: medium;
     }
     button:hover{
         background-color: $ah-offwhite;
-        color: $ah-red;
+        color: $ah-pink;
     }
 }
 
 .button{
-    background-color: $ah-red;
+    background-color: $ah-pink;
     color: $ah-offwhite;
     border-radius: 8px;
     font-size: medium;
@@ -112,18 +113,18 @@ td {
 }
 .button:hover{
     background-color: $ah-offwhite;
-    color: $ah-red;
+    color: $ah-pink;
     outline-color: $ah-offwhite;;
 }
 
 
 Table{
     outline-style: auto;
-    outline-color: $ah-red;
+    outline-color: $ah-pink;
     
     
     thead{
-        background-color: $ah-red;
+        background-color: $ah-pink;
         font-weight: bold;
         font-size: larger;
         color: #dbc5a9;
@@ -137,13 +138,13 @@ Table{
     tbody{
         tr{
             outline-style: auto;
-            outline-color: $ah-red;
+            outline-color: $ah-pink;
         }
 
 
     }
     .button{
-        background-color: $ah-red;
+        background-color: $ah-pink;
         color: $ah-offwhite;
         border-radius: 8px;
         font-size: medium;
@@ -151,7 +152,7 @@ Table{
     }
     .button:hover{
         background-color: $ah-offwhite;
-        color: $ah-red;
+        color: $ah-pink;
         outline-color: $ah-offwhite;;
     }
 }

@@ -49,14 +49,16 @@ def route_login():
 def create_user():
     '''This is user route for registration.'''
     _log.debug('Creating Client')
-    required_fields = ['username', 'password']
+    required_fields = ['first_name', 'last_name', 'username', 'password']
     if request.method == 'POST':
         input_dict = request.get_json(force=True)
         _log.debug('User POST request received with body %s', input_dict)
         if all(field in input_dict for field in required_fields):
+            first_name = input_dict['first_name']
+            last_name = input_dict['last_name']
             username = input_dict['username']
             password = input_dict['password']
-            new_client = Client(username, password)
+            new_client = Client(first_name, last_name, username, password)
             if create_client(new_client):
                 return jsonify(new_client.to_dict()), 201
             else:

@@ -10,6 +10,8 @@ class RegisterForm extends Component{
         super(props);
         this.handleUsernameChange = this.handleUsernameChange.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
+        this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
+        this.handleLastNameChange = this.handleLastNameChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     handleUsernameChange(e){
@@ -24,11 +26,23 @@ class RegisterForm extends Component{
         this.props.dispatch({type: 'handlePasswordChange', client: newClient})
         console.log(this.props.client)
     }
+    handleFirstNameChange(e){
+        let newClient = Object.assign({}, this.props.client);
+        newClient.first_name = e.target.value;
+        this.props.dispatch({type: 'handleFirstNameChange', client: newClient})
+        console.log('First Name:', this.props.client)
+    }
+    handleLastNameChange(e){
+        let newClient = Object.assign({}, this.props.client);
+        newClient.last_name = e.target.value;
+        this.props.dispatch({type: 'handleLastNameChange', client: newClient})
+        console.log('Last Name:', this.props.client)
+    }
     handleSubmit(e){
         e.preventDefault()
         this.registerService.addClient(this.props.client).then(
             (resp) => {
-                this.props.dispatch({type: 'addClient', client: {'username': '', 'password': ''}})
+                this.props.dispatch({type: 'addClient', client: {'username': '', 'password': '', 'first_name': '', 'last_name': ''}})
                 if (resp.status === 201){
                     alert("Successfully registered.")
                 } else {
@@ -61,6 +75,22 @@ class RegisterForm extends Component{
                         </div>
                         <div className="col">
                             <input type="text" className="form-control" onChange={this.handlePasswordChange}/>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col">
+                            <h5 className="form-group">First Name:</h5>
+                        </div>
+                        <div className="col">
+                            <input type="text" className="form-control" onChange={this.handleFirstNameChange}/>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col">
+                            <h5 className="form-group">Last Name:</h5>
+                        </div>
+                        <div className="col">
+                            <input type="text" className="form-control" onChange={this.handleLastNameChange}/>
                         </div>
                     </div>
                     <div className="row">

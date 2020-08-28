@@ -4,6 +4,8 @@ const initialState = {
     user: null, //username and password?
     username: '',
     password: '',
+    firstName: '',
+    lastName: '',
     userList: [],
     currentAppointments: [],
     appointments: [],
@@ -22,9 +24,17 @@ function queenRoxxaneReducer(state = initialState, action){
             return Object.assign({}, state, {username: action.username})
         case 'handlePassword':
             return Object.assign({}, state, {password: action.password})
+        case 'handleFirstName':
+            return Object.assign({}, state, {firstName: action.firstName})
+        case 'handleLastName':
+            return Object.assign({}, state, {lastName: action.lastName})
         case 'handleAppointmentChange':
             return Object.assign({}, state, {appointment: action.appointment})
-        case 'addAppointment':
+        case 'handleAppointmentTypeChange':
+            return Object.assign({}, state, {appointment: action.appointment})
+        case 'handleAppointmentDateChange':
+            return Object.assign({}, state, {appointment: action.appointment})
+        case 'createAppointment':
             return Object.assign({}, state, {appointment: action.appointment})
         case 'loadAppointmentList':
             return Object.assign({}, state, {appointmentList: action.appointmentList})
@@ -39,6 +49,10 @@ function queenRoxxaneReducer(state = initialState, action){
         case 'handleUsernameChange':
             return Object.assign({}, state, {client: action.client})
         case 'handlePasswordChange':
+            return Object.assign({}, state, {client: action.client})
+        case 'handleFirstNameChange':
+            return Object.assign({}, state, {client: action.client})
+        case 'handleLastNameChange':
             return Object.assign({}, state, {client: action.client})
         case 'handleUserFieldChange':
             return Object.assign({}, state, {user: action.user})   
