@@ -68,6 +68,7 @@ class AppointmentForm extends Component {
                     <div class="col"></div>
                     <div class="col">
                         <input class="form-control" type="text" onChange={this.handleAppointmentTypeChange}/>
+                        <div>For Appointment Type enter either: (Eyebrow Appt, Hair Appt or Nail Appt)</div>
                     </div>
                 </div>
                 <div class="row">

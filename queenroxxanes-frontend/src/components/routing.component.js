@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter as Router, Link } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
-/* import hellokitty from '../images/hellokitty.jpeg' */
+import AppointmentList from './appointmentlist.component';
 import ClientProfile from './clientprofile.component';
 import AppointmentForm from './appointmentform.component';
 import RegisterForm from './register.component';
@@ -37,7 +37,7 @@ function UserNav(props) {
         }
     }
     else{
-        return <Nav className="mr-auto"></Nav> 
+        return <Nav className="mr-auto"><img src='/images/hellogif.gif' alt=''/></Nav> 
     }
 }
 
@@ -52,11 +52,11 @@ class Routing extends Component{
                 <Navbar>
                     <Navbar.Brand><Link to='/' className='nav_link'><h1>Queen Roxxanes</h1></Link></Navbar.Brand>
                     <UserNav user={this.props.user}></UserNav>
-                    
+
                     <Login></Login>
                 </Navbar>
                 
-                {/* <Route path='/appointmentlist' component={AppointmentList}/> */}
+                <Route path='/appointmentlist' component={AppointmentList}/>
                 <Route path='/appointments' component={AppointmentForm}/>
                 <Route path='/register' component={RegisterForm}/>
                 <Route path="/login" component={Login}/>

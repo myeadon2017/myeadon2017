@@ -16,7 +16,7 @@ function CurrentAppointmentTable(props) {
             <td>{appointmentType}</td>
             <td>{appointmentDate}</td>
             <td>{appointmentPurchaseDate}</td>
-            <td>{appointmentPrice}</td>
+            <td>${appointmentPrice}</td>
         </tr>
     )
 }
