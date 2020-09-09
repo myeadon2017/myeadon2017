@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import AppointmentService from '../services/appointment.service';
 
 
-
 class AppointmentForm extends Component {
 
     appointmentService = new AppointmentService();
@@ -50,7 +49,7 @@ class AppointmentForm extends Component {
 
     render(){
         return(
-            <div class="form-group w-25">
+            <div class="form-group w-50">
                 <form onSubmit={this.handleSubmit}>
                 <div class="row">
                     <div class="col"></div>
@@ -61,14 +60,21 @@ class AppointmentForm extends Component {
                 <div class="row">
                     <div class="col"></div>
                     <div class="col">
-                        <h5 class="small_h5">Appointment Type:</h5>
+                        <h5 class="small_h5">Select Appointment Type:</h5>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col"></div>
-                    <div class="col">
-                        <input class="form-control" type="text" onChange={this.handleAppointmentTypeChange}/>
-                        <div>For Appointment Type enter either: (Eyebrow Appt, Hair Appt or Nail Appt)</div>
+                    <div class="col" onChange={this.handleAppointmentTypeChange}>
+                        <div>
+                            <input type="radio" value="Eyebrow Appt" name="Appointment Type" /> Eyebrow Appointment ($100)
+                        </div>
+                        <div>
+                            <input type="radio" value="Hair Appt" name="Appointment Type" /> Hair Appointment ($200)
+                        </div>
+                        <div>
+                            <input type="radio" value="Nail Appt" name="Appointment Type" /> Nail Appointment ($150)
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -80,7 +86,7 @@ class AppointmentForm extends Component {
                 <div class="row">
                     <div class="col"></div>
                     <div class="col">
-                        <input class="form-control" type="text" onChange={this.handleAppointmentDateChange}/>
+                        <input class="form-control" type="text" placeholder="Ex: 11/02/2020 10:00AM" onChange={this.handleAppointmentDateChange}/>
                     </div>
                 </div>
                 <div class="row">

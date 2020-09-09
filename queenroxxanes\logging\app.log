@@ -2249,3 +2249,1247 @@ KeyError: '_id'
 2020-08-31 15:26:49,954 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:26:49] "[37mDELETE /users HTTP/1.1[0m" 204 -
 2020-08-31 15:27:41,381 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:27:41] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
 2020-08-31 15:27:41,518 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:27:41] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-08-31 15:39:59,464 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:39:59] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-31 15:39:59,527 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:39:59] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-08-31 15:40:12,519 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:40:12] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-31 15:40:12,581 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:40:12] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-08-31 15:40:16,768 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:40:16] "[37mGET /appointments HTTP/1.1[0m" 200 -
+2020-08-31 15:41:01,951 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:41:01] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-31 15:41:01,956 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:41:01] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-08-31 15:41:08,079 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:41:08] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-31 15:41:08,143 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:41:08] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-08-31 15:41:11,141 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-08-31 15:41:11,197 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-08-31 15:41:11,243 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:41:11] "[35m[1mGET /users/current_appointments?_id=14 HTTP/1.1[0m" 500 -
+2020-08-31 15:41:28,163 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:41:28] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-31 15:41:28,168 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:41:28] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-08-31 15:41:58,539 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:41:58] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-31 15:41:58,647 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:41:58] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-08-31 15:42:15,842 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:42:15] "[37mOPTIONS /register HTTP/1.1[0m" 200 -
+2020-08-31 15:42:15,989 - queenroxxanes.data.db - INFO - Added <bound method Client.get_firstname of <queenroxxanes.models.users.Client object at 0x10f7f82b0>> ,Username: <bound method User.get_username of <queenroxxanes.models.users.Client object at 0x10f7f82b0>>
+2020-08-31 15:42:15,991 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:42:15] "[37mPOST /register HTTP/1.1[0m" 201 -
+2020-08-31 15:42:29,571 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:42:29] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-31 15:42:29,705 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:42:29] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-08-31 15:42:51,802 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:42:51] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-31 15:42:51,807 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:42:51] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-08-31 15:42:55,713 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:42:55] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-31 15:42:55,773 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:42:55] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-08-31 15:42:59,647 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:42:59] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-08-31 15:43:04,747 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-08-31 15:43:05,115 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:43:05] "[37mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 200 -
+2020-08-31 15:43:47,947 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:43:47] "[37mOPTIONS /appointments HTTP/1.1[0m" 200 -
+2020-08-31 15:43:48,245 - queenroxxanes.data.db - INFO - Updated information for client ID 16
+2020-08-31 15:43:48,247 - queenroxxanes.data.db - INFO - Added appointment 11, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x10f7f8bb0>>
+2020-08-31 15:43:48,248 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:43:48] "[37mPOST /appointments HTTP/1.1[0m" 201 -
+2020-08-31 15:43:55,013 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-08-31 15:43:55,067 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-08-31 15:43:55,098 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:43:55] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-08-31 15:44:03,116 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-08-31 15:44:03,175 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-08-31 15:44:03,177 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:44:03] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-08-31 15:44:05,052 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-08-31 15:44:05,113 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-08-31 15:44:05,125 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:44:05] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-08-31 15:44:06,142 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-08-31 15:44:06,197 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-08-31 15:44:06,199 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:44:06] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-08-31 15:44:08,940 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-08-31 15:44:09,001 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-08-31 15:44:09,006 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:44:09] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-08-31 15:44:09,966 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-08-31 15:44:10,028 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-08-31 15:44:10,038 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:44:10] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-08-31 15:44:11,092 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-08-31 15:44:11,149 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-08-31 15:44:11,153 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:44:11] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-08-31 15:44:12,199 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-08-31 15:44:12,256 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-08-31 15:44:12,257 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:44:12] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-08-31 15:44:15,869 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:44:15] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-31 15:44:15,874 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:44:15] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-08-31 15:44:18,384 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:44:18] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-31 15:44:18,448 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:44:18] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-08-31 15:44:26,000 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:44:25] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-31 15:44:26,063 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:44:26] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-08-31 15:44:30,862 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:44:30] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-08-31 15:44:31,353 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:44:31] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-31 15:44:31,415 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:44:31] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-08-31 15:44:34,010 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:44:34] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-08-31 15:44:35,049 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:44:35] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-08-31 15:44:37,470 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:44:37] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-31 15:44:37,533 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:44:37] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-08-31 15:44:38,721 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-08-31 15:44:38,780 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-08-31 15:44:38,782 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:44:38] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-08-31 15:45:41,101 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:45:41] "[37mOPTIONS /appointments HTTP/1.1[0m" 200 -
+2020-08-31 15:45:41,486 - queenroxxanes.data.db - INFO - Updated information for client ID 16
+2020-08-31 15:45:41,487 - queenroxxanes.data.db - INFO - Added appointment 12, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x10f7903a0>>
+2020-08-31 15:45:41,488 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:45:41] "[37mPOST /appointments HTTP/1.1[0m" 201 -
+2020-08-31 15:45:53,482 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-08-31 15:45:53,539 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-08-31 15:45:53,541 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:45:53] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-08-31 15:45:56,634 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-08-31 15:45:56,688 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-08-31 15:45:56,690 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:45:56] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-08-31 15:45:58,489 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:45:58] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-31 15:45:58,532 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:45:58] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-08-31 15:46:04,747 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:46:04] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-31 15:46:05,151 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:46:05] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-08-31 15:46:28,640 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:46:28] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-31 15:46:28,682 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:46:28] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-08-31 15:46:44,637 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:46:44] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-31 15:46:44,742 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:46:44] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-08-31 15:46:50,527 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:46:50] "[37mGET /appointments HTTP/1.1[0m" 200 -
+2020-08-31 15:46:52,613 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:46:52] "[37mGET /appointments HTTP/1.1[0m" 200 -
+2020-08-31 15:47:17,624 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:47:17] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-08-31 15:47:17,643 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2020 15:47:17] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-09-01 11:11:19,026 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 11:11:19] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-01 11:11:20,028 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 11:11:20] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-09-01 11:13:01,123 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 11:13:01] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-01 11:13:14,955 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 11:13:14] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-01 11:13:21,854 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 11:13:21] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-01 11:14:09,282 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 11:14:09] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-01 11:14:36,963 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 11:14:36] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-01 11:15:08,757 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 11:15:08] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-01 11:15:22,376 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 11:15:22] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-01 11:16:04,892 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 11:16:04] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-01 11:16:09,044 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 11:16:09] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-01 11:16:50,784 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-01 11:16:51,230 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-01 11:16:51,312 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 11:16:51] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-09-01 11:16:56,069 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 11:16:56] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-01 11:16:56,101 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 11:16:56] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-09-01 11:17:20,238 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 11:17:20] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-01 11:17:20,318 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 11:17:20] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-09-01 11:17:21,490 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-01 11:17:21,543 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-01 11:17:21,545 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 11:17:21] "[35m[1mGET /users/current_appointments?_id=14 HTTP/1.1[0m" 500 -
+2020-09-01 11:17:40,168 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 11:17:40] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-01 11:17:40,183 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 11:17:40] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-09-01 21:47:51,417 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 21:47:51] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-01 21:47:51,932 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 21:47:51] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-09-01 21:48:28,603 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 21:48:28] "[37mOPTIONS /appointments HTTP/1.1[0m" 200 -
+2020-09-01 21:48:29,057 - queenroxxanes.data.db - INFO - Updated information for client ID 13
+2020-09-01 21:48:29,058 - queenroxxanes.data.db - INFO - Added appointment 13, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x10f6f96a0>>
+2020-09-01 21:48:29,073 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 21:48:29] "[37mPOST /appointments HTTP/1.1[0m" 201 -
+2020-09-01 21:48:33,807 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-01 21:48:33,864 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-01 21:48:34,012 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 21:48:34] "[35m[1mGET /users/current_appointments?_id=13 HTTP/1.1[0m" 500 -
+2020-09-01 21:48:39,325 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 21:48:39] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-01 21:48:39,369 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 21:48:39] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-09-01 21:48:58,316 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 21:48:58] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-01 21:48:58,449 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 21:48:58] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-09-01 21:49:12,104 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 21:49:12] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-01 21:49:18,216 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 21:49:18] "[37mGET /appointments HTTP/1.1[0m" 200 -
+2020-09-01 21:49:36,409 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 21:49:36] "[37mGET /appointments HTTP/1.1[0m" 200 -
+2020-09-01 21:50:11,437 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 21:50:11] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-01 21:50:11,462 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 21:50:11] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-09-01 22:47:01,486 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 22:47:01] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-01 22:47:01,960 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 22:47:01] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-09-01 22:47:05,989 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 22:47:05] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-09-01 22:48:03,931 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 22:48:03] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-01 22:48:04,034 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 22:48:04] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-09-01 22:48:07,068 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 22:48:07] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-09-01 22:48:08,281 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 22:48:08] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-09-01 22:48:10,596 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 22:48:10] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-01 22:48:10,661 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 22:48:10] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-09-01 22:48:13,611 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-01 22:48:13,687 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-01 22:48:13,724 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 22:48:13] "[35m[1mGET /users/current_appointments?_id=14 HTTP/1.1[0m" 500 -
+2020-09-01 22:48:43,950 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 22:48:43] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-01 22:48:43,998 - werkzeug - INFO - 127.0.0.1 - - [01/Sep/2020 22:48:43] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-09-03 14:21:06,967 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2020 14:21:06] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-03 14:21:16,151 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2020 14:21:16] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-03 14:21:32,482 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2020 14:21:32] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-03 14:21:37,547 - queenroxxanes.app - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 23, in route_login
+    user = login(user_username, user_password)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 125, in login
+    user_dict = users.find_one(query_dict)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/collection.py", line 1319, in find_one
+    for result in cursor.limit(-1):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/cursor.py", line 1207, in next
+    if len(self.__data) or self._refresh():
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/cursor.py", line 1100, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1816, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1766, in __start_session
+    server_session = self._get_server_session()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1802, in _get_server_session
+    return self._topology.get_server_session()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/topology.py", line 490, in get_server_session
+    self._select_servers_loop(
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: connection closed,cluster0-shard-00-00-rnurl.mongodb.net:27017: [Errno 54] Connection reset by peer,cluster0-shard-00-02-rnurl.mongodb.net:27017: The read operation timed out, Timeout: 30s, Topology Description: <TopologyDescription id: 5f4d45c313f90ca68ae08900, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('cluster0-shard-00-00-rnurl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('cluster0-shard-00-00-rnurl.mongodb.net:27017: [Errno 54] Connection reset by peer')>, <ServerDescription ('cluster0-shard-00-01-rnurl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('connection closed')>, <ServerDescription ('cluster0-shard-00-02-rnurl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('cluster0-shard-00-02-rnurl.mongodb.net:27017: The read operation timed out')>]>
+2020-09-03 14:21:38,307 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2020 14:21:38] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-09-03 14:21:40,668 - queenroxxanes.app - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 23, in route_login
+    user = login(user_username, user_password)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 125, in login
+    user_dict = users.find_one(query_dict)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/collection.py", line 1319, in find_one
+    for result in cursor.limit(-1):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/cursor.py", line 1207, in next
+    if len(self.__data) or self._refresh():
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/cursor.py", line 1100, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1816, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1766, in __start_session
+    server_session = self._get_server_session()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1802, in _get_server_session
+    return self._topology.get_server_session()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/topology.py", line 490, in get_server_session
+    self._select_servers_loop(
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: SSL handshake failed: cluster0-shard-00-01-rnurl.mongodb.net:27017: _ssl.c:1091: The handshake operation timed out,cluster0-shard-00-00-rnurl.mongodb.net:27017: [Errno 54] Connection reset by peer,cluster0-shard-00-02-rnurl.mongodb.net:27017: The read operation timed out, Timeout: 30s, Topology Description: <TopologyDescription id: 5f4d45c313f90ca68ae08900, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('cluster0-shard-00-00-rnurl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('cluster0-shard-00-00-rnurl.mongodb.net:27017: [Errno 54] Connection reset by peer')>, <ServerDescription ('cluster0-shard-00-01-rnurl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('SSL handshake failed: cluster0-shard-00-01-rnurl.mongodb.net:27017: _ssl.c:1091: The handshake operation timed out')>, <ServerDescription ('cluster0-shard-00-02-rnurl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('cluster0-shard-00-02-rnurl.mongodb.net:27017: The read operation timed out')>]>
+2020-09-03 14:21:41,028 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2020 14:21:41] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-09-03 14:21:46,711 - queenroxxanes.app - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 23, in route_login
+    user = login(user_username, user_password)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 125, in login
+    user_dict = users.find_one(query_dict)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/collection.py", line 1319, in find_one
+    for result in cursor.limit(-1):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/cursor.py", line 1207, in next
+    if len(self.__data) or self._refresh():
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/cursor.py", line 1100, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1816, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1766, in __start_session
+    server_session = self._get_server_session()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1802, in _get_server_session
+    return self._topology.get_server_session()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/topology.py", line 490, in get_server_session
+    self._select_servers_loop(
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: SSL handshake failed: cluster0-shard-00-01-rnurl.mongodb.net:27017: _ssl.c:1091: The handshake operation timed out,cluster0-shard-00-00-rnurl.mongodb.net:27017: [Errno 54] Connection reset by peer,cluster0-shard-00-02-rnurl.mongodb.net:27017: The read operation timed out, Timeout: 30s, Topology Description: <TopologyDescription id: 5f4d45c313f90ca68ae08900, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('cluster0-shard-00-00-rnurl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('cluster0-shard-00-00-rnurl.mongodb.net:27017: [Errno 54] Connection reset by peer')>, <ServerDescription ('cluster0-shard-00-01-rnurl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('SSL handshake failed: cluster0-shard-00-01-rnurl.mongodb.net:27017: _ssl.c:1091: The handshake operation timed out')>, <ServerDescription ('cluster0-shard-00-02-rnurl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('cluster0-shard-00-02-rnurl.mongodb.net:27017: The read operation timed out')>]>
+2020-09-03 14:21:46,745 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2020 14:21:46] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-09-03 14:22:02,874 - queenroxxanes.app - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 23, in route_login
+    user = login(user_username, user_password)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 125, in login
+    user_dict = users.find_one(query_dict)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/collection.py", line 1319, in find_one
+    for result in cursor.limit(-1):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/cursor.py", line 1207, in next
+    if len(self.__data) or self._refresh():
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/cursor.py", line 1100, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1816, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1766, in __start_session
+    server_session = self._get_server_session()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1802, in _get_server_session
+    return self._topology.get_server_session()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/topology.py", line 490, in get_server_session
+    self._select_servers_loop(
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: cluster0-shard-00-01-rnurl.mongodb.net:27017: The read operation timed out,SSL handshake failed: cluster0-shard-00-00-rnurl.mongodb.net:27017: [Errno 54] Connection reset by peer,SSL handshake failed: cluster0-shard-00-02-rnurl.mongodb.net:27017: _ssl.c:1091: The handshake operation timed out, Timeout: 30s, Topology Description: <TopologyDescription id: 5f4d45c313f90ca68ae08900, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('cluster0-shard-00-00-rnurl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('SSL handshake failed: cluster0-shard-00-00-rnurl.mongodb.net:27017: [Errno 54] Connection reset by peer')>, <ServerDescription ('cluster0-shard-00-01-rnurl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('cluster0-shard-00-01-rnurl.mongodb.net:27017: The read operation timed out')>, <ServerDescription ('cluster0-shard-00-02-rnurl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('SSL handshake failed: cluster0-shard-00-02-rnurl.mongodb.net:27017: _ssl.c:1091: The handshake operation timed out')>]>
+2020-09-03 14:22:03,003 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2020 14:22:03] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-09-03 14:23:29,400 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2020 14:23:29] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-03 14:23:59,635 - queenroxxanes.app - ERROR - Exception on /users [POST]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 23, in route_login
+    user = login(user_username, user_password)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 125, in login
+    user_dict = users.find_one(query_dict)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/collection.py", line 1319, in find_one
+    for result in cursor.limit(-1):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/cursor.py", line 1207, in next
+    if len(self.__data) or self._refresh():
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/cursor.py", line 1100, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1816, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1766, in __start_session
+    server_session = self._get_server_session()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1802, in _get_server_session
+    return self._topology.get_server_session()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/topology.py", line 490, in get_server_session
+    self._select_servers_loop(
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: SSL handshake failed: cluster0-shard-00-01-rnurl.mongodb.net:27017: _ssl.c:1091: The handshake operation timed out,cluster0-shard-00-00-rnurl.mongodb.net:27017: The read operation timed out,cluster0-shard-00-02-rnurl.mongodb.net:27017: The read operation timed out, Timeout: 30s, Topology Description: <TopologyDescription id: 5f4d45c313f90ca68ae08900, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('cluster0-shard-00-00-rnurl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('cluster0-shard-00-00-rnurl.mongodb.net:27017: The read operation timed out')>, <ServerDescription ('cluster0-shard-00-01-rnurl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('SSL handshake failed: cluster0-shard-00-01-rnurl.mongodb.net:27017: _ssl.c:1091: The handshake operation timed out')>, <ServerDescription ('cluster0-shard-00-02-rnurl.mongodb.net', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('cluster0-shard-00-02-rnurl.mongodb.net:27017: The read operation timed out')>]>
+2020-09-03 14:23:59,737 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2020 14:23:59] "[35m[1mPOST /users HTTP/1.1[0m" 500 -
+2020-09-08 13:45:20,002 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-09-08 13:47:22,374 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 13:47:22] "[31m[1mGET /users HTTP/1.1[0m" 401 -
+2020-09-08 13:48:59,569 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 13:48:59] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 13:49:00,089 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 13:49:00] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-09-08 13:49:01,534 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-08 13:49:01,593 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-08 13:49:01,711 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 13:49:01] "[35m[1mGET /users/current_appointments?_id=13 HTTP/1.1[0m" 500 -
+2020-09-08 13:49:04,680 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 13:49:04] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 13:49:04,687 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 13:49:04] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-09-08 13:49:12,944 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 13:49:12] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 13:49:13,025 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 13:49:13] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-09-08 14:04:54,663 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:04:54] "[31m[1mGET /users HTTP/1.1[0m" 401 -
+2020-09-08 14:05:04,790 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:05:04] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 14:05:04,883 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:05:04] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-09-08 14:05:25,533 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:05:25] "[37mOPTIONS /appointments HTTP/1.1[0m" 200 -
+2020-09-08 14:05:25,877 - queenroxxanes.data.db - INFO - Updated information for client ID 13
+2020-09-08 14:05:25,878 - queenroxxanes.data.db - INFO - Added appointment 14, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x10733bcd0>>
+2020-09-08 14:05:25,879 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:05:25] "[37mPOST /appointments HTTP/1.1[0m" 201 -
+2020-09-08 14:05:28,327 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-08 14:05:28,386 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-08 14:05:28,439 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:05:28] "[35m[1mGET /users/current_appointments?_id=13 HTTP/1.1[0m" 500 -
+2020-09-08 14:05:38,090 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-08 14:05:38,209 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-08 14:05:38,212 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:05:38] "[35m[1mGET /users/current_appointments?_id=13 HTTP/1.1[0m" 500 -
+2020-09-08 14:05:40,771 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:05:40] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:05:45,118 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:05:45] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:05:46,247 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-08 14:05:46,305 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-08 14:05:46,307 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:05:46] "[35m[1mGET /users/current_appointments?_id=13 HTTP/1.1[0m" 500 -
+2020-09-08 14:07:34,235 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:07:34] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:08:47,240 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:08:47] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:08:48,386 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-08 14:08:48,450 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-08 14:08:48,453 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:08:48] "[35m[1mGET /users/current_appointments?_id=13 HTTP/1.1[0m" 500 -
+2020-09-08 14:09:09,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:09:09] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:09:24,487 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:09:24] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:09:32,915 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:09:32] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:10:20,595 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:10:20] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:10:25,270 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:10:25] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:11:51,727 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:11:51] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:11:55,048 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:11:55] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:13:04,167 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:13:04] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:13:11,521 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:13:11] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:13:22,476 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:13:22] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:14:09,098 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:14:09] "[37mOPTIONS /appointments HTTP/1.1[0m" 200 -
+2020-09-08 14:14:09,418 - queenroxxanes.data.db - INFO - Updated information for client ID 13
+2020-09-08 14:14:09,419 - queenroxxanes.data.db - INFO - Added appointment 15, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x10733ba30>>
+2020-09-08 14:14:09,422 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:14:09] "[37mPOST /appointments HTTP/1.1[0m" 201 -
+2020-09-08 14:14:12,492 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-08 14:14:12,550 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-08 14:14:12,590 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:14:12] "[35m[1mGET /users/current_appointments?_id=13 HTTP/1.1[0m" 500 -
+2020-09-08 14:14:17,265 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:14:17] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 14:14:17,280 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:14:17] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-09-08 14:14:19,037 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:14:19] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 14:14:19,102 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:14:19] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-09-08 14:14:47,250 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:14:47] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 14:14:47,258 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:14:47] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-09-08 14:15:24,676 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:15:24] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 14:15:24,805 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:15:24] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-09-08 14:15:27,464 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-08 14:15:27,598 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-08 14:15:27,622 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:15:27] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-09-08 14:15:32,491 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-08 14:15:32,548 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-08 14:15:32,550 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:15:32] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-09-08 14:15:36,450 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-08 14:15:36,538 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-08 14:15:36,542 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:15:36] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-09-08 14:15:57,739 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:15:57] "[37mOPTIONS /appointments HTTP/1.1[0m" 200 -
+2020-09-08 14:15:58,089 - queenroxxanes.data.db - INFO - Updated information for client ID 16
+2020-09-08 14:15:58,089 - queenroxxanes.data.db - INFO - Added appointment 16, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x10741a700>>
+2020-09-08 14:15:58,091 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:15:58] "[37mPOST /appointments HTTP/1.1[0m" 201 -
+2020-09-08 14:16:14,338 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-08 14:16:14,417 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-08 14:16:14,461 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:16:14] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-09-08 14:16:18,170 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:16:18] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 14:16:18,175 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:16:18] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-09-08 14:16:20,323 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:16:20] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 14:16:20,404 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:16:20] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-09-08 14:16:35,169 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:16:35] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 14:16:35,266 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:16:35] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-09-08 14:16:40,099 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:16:40] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-09-08 14:16:44,929 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:16:44] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 14:16:44,995 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:16:44] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-09-08 14:16:46,181 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-08 14:16:46,241 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-08 14:16:46,243 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:16:46] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-09-08 14:18:45,238 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:18:45] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:19:05,050 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:19:05] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:19:06,473 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-08 14:19:06,533 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-08 14:19:06,540 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:19:06] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-09-08 14:25:17,209 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:25:17] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:25:23,037 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:25:23] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:26:12,012 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:26:12] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:26:15,969 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:26:15] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:27:44,214 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:27:44] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:27:46,827 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:27:46] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:30:04,598 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:30:04] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:30:07,979 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:30:07] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:30:53,523 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:30:53] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:31:09,957 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:31:09] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:41:35,110 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:41:35] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:50:59,375 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-09-08 14:53:11,592 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:53:11] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:54:56,807 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:54:56] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:55:06,033 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:55:06] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:55:46,230 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:55:46] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:58:42,130 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:58:42] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:58:51,495 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:58:51] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 14:59:14,888 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:59:14] "[37mOPTIONS /appointments HTTP/1.1[0m" 200 -
+2020-09-08 14:59:15,224 - queenroxxanes.data.db - INFO - Updated information for client ID 16
+2020-09-08 14:59:15,226 - queenroxxanes.data.db - INFO - Added appointment 17, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x1105762b0>>
+2020-09-08 14:59:15,227 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:59:15] "[37mPOST /appointments HTTP/1.1[0m" 201 -
+2020-09-08 14:59:20,747 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:59:20] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 14:59:20,752 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:59:20] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-09-08 14:59:25,332 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:59:25] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 14:59:25,406 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:59:25] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-09-08 14:59:26,471 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-08 14:59:26,529 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-08 14:59:26,606 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 14:59:26] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-09-08 15:02:07,425 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 15:02:07] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 15:02:14,270 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 15:02:14] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 15:02:16,103 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-08 15:02:16,165 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-08 15:02:16,172 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 15:02:16] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-09-08 15:02:28,760 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 15:02:28] "[37mOPTIONS /appointments HTTP/1.1[0m" 200 -
+2020-09-08 15:02:29,074 - queenroxxanes.data.db - INFO - Updated information for client ID 16
+2020-09-08 15:02:29,074 - queenroxxanes.data.db - INFO - Added appointment 18, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x1105f4100>>
+2020-09-08 15:02:29,075 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 15:02:29] "[37mPOST /appointments HTTP/1.1[0m" 201 -
+2020-09-08 15:02:31,103 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 15:02:31] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 15:02:31,108 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 15:02:31] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-09-08 15:02:32,360 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 15:02:32] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 15:02:32,484 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 15:02:32] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-09-08 15:02:34,175 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-08 15:02:34,233 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-08 15:02:34,235 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 15:02:34] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-09-08 15:03:17,603 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-09-08 15:04:58,795 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 15:04:58] "[37mGET /users HTTP/1.1[0m" 200 -
+2020-09-08 15:05:04,761 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-08 15:05:04,820 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-08 15:05:04,904 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 15:05:04] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-09-08 15:05:12,737 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 15:05:12] "[37mOPTIONS /appointments HTTP/1.1[0m" 200 -
+2020-09-08 15:05:13,081 - queenroxxanes.data.db - INFO - Updated information for client ID 16
+2020-09-08 15:05:13,082 - queenroxxanes.data.db - INFO - Added appointment 19, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x1077af910>>
+2020-09-08 15:05:13,083 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 15:05:13] "[37mPOST /appointments HTTP/1.1[0m" 201 -
+2020-09-08 15:05:15,884 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 15:05:15] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 15:05:15,890 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 15:05:15] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-09-08 15:05:16,996 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 15:05:16] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 15:05:17,064 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 15:05:17] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-09-08 15:05:18,098 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-08 15:05:18,161 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-08 15:05:18,171 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 15:05:18] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-09-08 15:05:37,323 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 15:05:37] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 15:05:37,341 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 15:05:37] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-09-08 19:12:01,454 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 19:12:01] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 19:12:01,991 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 19:12:01] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-09-08 19:12:09,652 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 19:12:09] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 19:12:09,877 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 19:12:09] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-09-08 19:12:13,178 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 19:12:13] "[31m[1mGET /users HTTP/1.1[0m" 401 -
+2020-09-08 19:12:14,690 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 19:12:14] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 19:12:14,756 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 19:12:14] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-09-08 19:12:49,781 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 19:12:49] "[37mOPTIONS /appointments HTTP/1.1[0m" 200 -
+2020-09-08 19:12:50,250 - queenroxxanes.data.db - INFO - Updated information for client ID 16
+2020-09-08 19:12:50,252 - queenroxxanes.data.db - INFO - Added appointment 20, <bound method Appointment.get_appointment_type of <queenroxxanes.models.appointments.Appointment object at 0x1077af760>>
+2020-09-08 19:12:50,253 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 19:12:50] "[37mPOST /appointments HTTP/1.1[0m" 201 -
+2020-09-08 19:12:54,772 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 19:12:54] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 19:12:54,777 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 19:12:54] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-09-08 19:12:56,521 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 19:12:56] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 19:12:56,593 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 19:12:56] "[31m[1mPOST /users HTTP/1.1[0m" 401 -
+2020-09-08 19:13:01,661 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 19:13:01] "[31m[1mGET /users HTTP/1.1[0m" 401 -
+2020-09-08 19:13:12,602 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 19:13:12] "[31m[1mGET /users HTTP/1.1[0m" 401 -
+2020-09-08 19:13:14,760 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 19:13:14] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-08 19:13:14,831 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 19:13:14] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-09-08 19:13:16,108 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-08 19:13:16,167 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-08 19:13:16,172 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2020 19:13:16] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-09-09 11:11:57,707 - queenroxxanes.router.users - INFO - GET request for appointment info of appointment history
+2020-09-09 11:11:58,446 - queenroxxanes.app - ERROR - Exception on /users/current_appointments [GET]
+Traceback (most recent call last):
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/matthewyeadon/.local/share/virtualenvs/myeadon2017-QGXdPE8A/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/router/users.py", line 114, in route_current_appointments
+    result = read_appointment_info_by_users_current_appointments(input_dict['_id'])
+  File "/Users/matthewyeadon/Documents/GitHub/myeadon2017/queenroxxanes/data/db.py", line 116, in read_appointment_info_by_users_current_appointments
+    appt = read_appointment_by_id(int(appointment['_id']))
+KeyError: '_id'
+2020-09-09 11:11:58,725 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:11:58] "[35m[1mGET /users/current_appointments?_id=16 HTTP/1.1[0m" 500 -
+2020-09-09 11:12:13,443 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:12:13] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-09 11:12:13,540 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:12:13] "[37mDELETE /users HTTP/1.1[0m" 204 -
+2020-09-09 11:12:33,612 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:12:33] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-09 11:12:34,056 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:12:34] "[37mPOST /users HTTP/1.1[0m" 200 -
+2020-09-09 11:12:48,319 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:12:48] "[37mGET /appointments HTTP/1.1[0m" 200 -
+2020-09-09 11:12:56,324 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:12:56] "[37mGET /appointments HTTP/1.1[0m" 200 -
+2020-09-09 11:12:59,345 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:12:59] "[37mGET /appointments HTTP/1.1[0m" 200 -
+2020-09-09 11:13:00,546 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:13:00] "[37mGET /appointments HTTP/1.1[0m" 200 -
+2020-09-09 11:13:01,719 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:13:01] "[37mGET /appointments HTTP/1.1[0m" 200 -
+2020-09-09 11:13:02,899 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:13:02] "[37mGET /appointments HTTP/1.1[0m" 200 -
+2020-09-09 11:13:05,190 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:13:05] "[37mGET /appointments HTTP/1.1[0m" 200 -
+2020-09-09 11:13:06,387 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:13:06] "[37mGET /appointments HTTP/1.1[0m" 200 -
+2020-09-09 11:13:07,560 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:13:07] "[37mGET /appointments HTTP/1.1[0m" 200 -
+2020-09-09 11:13:08,748 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:13:08] "[37mGET /appointments HTTP/1.1[0m" 200 -
+2020-09-09 11:13:09,911 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:13:09] "[37mGET /appointments HTTP/1.1[0m" 200 -
+2020-09-09 11:13:11,094 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:13:11] "[37mGET /appointments HTTP/1.1[0m" 200 -
+2020-09-09 11:14:20,786 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:14:20] "[37mGET /appointments HTTP/1.1[0m" 200 -
+2020-09-09 11:14:28,502 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:14:28] "[37mGET /appointments HTTP/1.1[0m" 200 -
+2020-09-09 11:14:29,700 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:14:29] "[37mGET /appointments HTTP/1.1[0m" 200 -
+2020-09-09 11:14:39,641 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:14:39] "[37mOPTIONS /users HTTP/1.1[0m" 200 -
+2020-09-09 11:14:39,668 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2020 11:14:39] "[37mDELETE /users HTTP/1.1[0m" 204 -
